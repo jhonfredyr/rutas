@@ -1,0 +1,34 @@
+
+<h1>formulario usuario</h1>
+<form (ngSubmit)="guardar()">
+    <label>nombre_paciente</label>
+    <input [(ngModel)]="nombre_paciente" name = "nombre_paciente" placeholder = "escriba nombre del nombre_paciente">
+    <label>documento</label>
+    <input [(ngModel)]="documento" name="documento" placeholder="escriba la clase de documento">
+    <label>fecha</label>
+    <input [(ngModel)]="fecha" name="fecha" placeholder="escriba la fecha">
+    <label>hora</label>
+    <input [(ngModel)]="hora" name="hora" placeholder="escriba la hora">
+    <label >expecialidad</label>
+    <input [(ngModel)]="expecialidad" name="expecialidad" placeholder="escriba la expecialidad">
+    <button type="submit">guardar</button>
+    <button>cancelar</button>
+</form>
+
+<table>
+    <tr>
+        <th>nombre_paciente</th>
+        <th>documento</th>
+        <th>fecha</th>
+        <th>hora</th>
+        <th>expecialidad</th>
+    </tr>
+    <tr *ngFor="let i of listamedica ">
+    <td> {{i.nombre}}</td>
+    <td>{{i.correo}}</td>
+    <td>{{i.asunto}}</td>
+    <td>{{i.mensaje}}</td>
+    <td>{{i.expecialidad}} </td>
+
+</tr>
+</table>

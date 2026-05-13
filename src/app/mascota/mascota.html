@@ -1,0 +1,30 @@
+
+<h1>formulario usuario</h1>
+<form (ngSubmit)="guardar()">
+    <label>nombre_mascota</label>
+    <input [(ngModel)]="nombre_mascota" name = "nombre_mascota" placeholder = "escriba nombre de la mascota">
+    <label>tipo</label>
+    <input [(ngModel)]="tipo" name="tipo" placeholder="escriba el tipo">
+    <label>edad</label>
+    <input [(ngModel)]="edad" name="edad" placeholder="escriba la edad de la mascota">
+    <label>nombre_dueño</label>
+    <input [(ngModel)]="nombre_dueño" name="nombre_dueño" placeholder="escriba el nombre del dueño">
+    <button type="submit">guardar</button>
+    <button>cancelar</button>
+</form>
+
+<table>
+    <tr>
+        <th>nombre_mascota</th>
+        <th>tipo</th>
+        <th>edad</th>
+        <th>nombre_dueño</th>
+    </tr>
+    <tr *ngFor="let i of listaMascota ">
+    <td> {{i.nombre_mascota}}</td>
+    <td>{{i.tipo}}</td>
+    <td>{{i.edad}}</td>
+    <td>{{i.nombre_dueño}}</td>
+
+</tr>
+</table>

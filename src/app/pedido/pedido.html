@@ -1,0 +1,30 @@
+
+<h1>formulariopedidos</h1>
+<form (ngSubmit)="guardar()">
+    <label>cliente</label>
+    <input [(ngModel)]="cliente" name = "cliente" placeholder = "escriba nombre del cliente">
+    <label>producto</label>
+    <input [(ngModel)]="producto" name="producto" placeholder="escriba el producto">
+    <label>cantidad</label>
+    <input [(ngModel)]="cantidad" name="cantidad" placeholder="escriba la cantidad">
+    <label>direccion_entrega</label>
+    <input [(ngModel)]="direccion_entrega" name="direccion_entrega" placeholder="escriba la direccion de la entrega">
+    <button type="submit">guardar</button>
+    <button>cancelar</button>
+</form>
+
+<table>
+    <tr>
+        <th>cliente</th>
+        <th>producto</th>
+        <th>cantidad</th>
+        <th>direccion_entrega</th>
+    </tr>
+    <tr *ngFor="let i of listaPedido ">
+    <td> {{i.cliente}}</td>
+    <td>{{i.producto}}</td>
+    <td>{{i.cantidad}}</td>
+    <td>{{i.direccion_entrega}}</td>
+
+</tr>
+</table>

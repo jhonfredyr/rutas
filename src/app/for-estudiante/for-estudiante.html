@@ -1,0 +1,30 @@
+
+<h1>formulario usuario</h1>
+<form (ngSubmit)="guardar()">
+    <label>nombre</label>
+    <input [(ngModel)]="nombre" name = "nombre" placeholder = "escriba nombre">
+    <label>edad</label>
+    <input [(ngModel)]="edad" name="edad" placeholder="escriba su edad">
+    <label>programa</label>
+    <input [(ngModel)]="programa" name="programa" placeholder="escriba el programa">
+    <label>semestre</label>
+    <input [(ngModel)]="semestre" name="semestre" placeholder="escriba el semestre">
+    <button type="submit">guardar</button>
+    <button>cancelar</button>
+</form>
+
+<table>
+    <tr>
+        <th>nombre</th>
+        <th>edad</th>
+        <th>programa</th>
+        <th>semestre</th>
+    </tr>
+    <tr *ngFor="let i of listaestudiante ">
+    <td> {{i.nombre}}</td>
+    <td>{{i.edad}}</td>
+    <td>{{i.programa}}</td>
+    <td>{{i.semestre}}</td>
+
+</tr>
+</table>

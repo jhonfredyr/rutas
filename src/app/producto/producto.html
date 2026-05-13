@@ -1,0 +1,30 @@
+
+<h1>Formulario de producto</h1>
+<form (ngSubmit)="guardar()">
+    <label>nombre</label>
+    <input [(ngModel)]="nombre" name = "nombre" placeholder = "escriba nombre">
+    <label>precio</label>
+    <input [(ngModel)]="precio" name="precio" placeholder="escriba el precio">
+    <label>cantidad</label>
+    <input [(ngModel)]="cantidad" name="cantidad" placeholder="escriba la cantidad">
+    <label>categoria</label>
+    <input [(ngModel)]="categoria" name="categoria" placeholder="escriba la categoria">
+    <button type="submit">guardar</button>
+    <button>cancelar</button>
+</form>
+
+<table>
+    <tr>
+        <th>nombre</th>
+        <th>precio</th>
+        <th>cantidad</th>
+        <th>categoria</th>
+    </tr>
+    <tr *ngFor="let i of ListaProducto ">
+    <td> {{i.nombre}}</td>
+    <td>{{i.precio}}</td>
+    <td>{{i.cantidad}}</td>
+    <td>{{i.categoria}}</td>
+
+</tr>
+</table>

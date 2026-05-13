@@ -1,0 +1,30 @@
+
+<h1>formulario usuario</h1>
+<form (ngSubmit)="guardar()">
+    <label>titulo</label>
+    <input [(ngModel)]="titulo" name = "titulo" placeholder = "escribatitulo del libro">
+    <label>autor</label>
+    <input [(ngModel)]="autor" name="autor" placeholder="escriba el autor">
+    <label>anio</label>
+    <input [(ngModel)]="anio" name="anio" placeholder="escriba el año de expedicion">
+    <label>editorial</label>
+    <input [(ngModel)]="editorial" name="editorial" placeholder="escriba un editorial">
+    <button type="submit">guardar</button>
+    <button>cancelar</button>
+</form>
+
+<table>
+    <tr>
+        <th>titulo</th>
+        <th>autor</th>
+        <th>anio</th>
+        <th>editorial</th>
+    </tr>
+    <tr *ngFor="let i of listaLibro ">
+    <td> {{i.titulo}}</td>
+    <td>{{i.autor}}</td>
+    <td>{{i.anio}}</td>
+    <td>{{i.editorial}}</td>
+
+</tr>
+</table>

@@ -1,0 +1,29 @@
+<h1>formulario usuario</h1>
+<form (ngSubmit)="guardar()">
+    <label>nombre</label>
+    <input [(ngModel)]="nombre" name = "nombre" placeholder = "escriba nombre">
+    <label>documento</label>
+    <input [(ngModel)]="apellido" name="apellido" placeholder="escriba apellido">
+    <label>ampleado</label>
+    <input [(ngModel)]="correo" name="correo" placeholder="escriba su correo">
+    <label>salario</label>
+    <input [(ngModel)]="telefono" name="telefono" placeholder="escriba su telefono">
+    <button type="submit">guardar</button>
+    <button>cancelar</button>
+</form>
+
+<table>
+    <tr>
+        <th>nombre</th>
+        <th>documento</th>
+        <th>empleado</th>
+        <th>salario</th>
+    </tr>
+    <tr *ngFor="let i of listaempleado ">
+    <td> {{i.nombre}}</td>
+    <td>{{i.documento}}</td>
+    <td>{{i.empleado}}</td>
+    <td>{{i.salario}}</td>
+
+</tr>
+</table>
