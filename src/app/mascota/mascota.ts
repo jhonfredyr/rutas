@@ -11,15 +11,15 @@ export class Mascota {
   nombre_mascota:string='';
   tipo:string='';
   edad:string='';
-  nombre_dueño:string='';
+  nombre_duenio:string='';
 
   listaMascota:any[]=[]
-  guaardar(){
+  guardar(){
     const mascota={
       nombre_mascota:this.nombre_mascota,
       tipo:this.tipo,
       edad:this.edad,
-      nombre_dueño:this.nombre_dueño
+      nombre_duenio:this.nombre_duenio
     }
     this.listaMascota.push(mascota);
     console.log(this.listaMascota);

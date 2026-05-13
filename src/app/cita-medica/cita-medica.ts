@@ -12,9 +12,12 @@ export class CitaMedica {
  documento:string='';
  fecha:string='';
  hora:string='';
- expecialidad:string=''
+ expecialidad:string='';
+ 
  listamedica:any[]=[];
- Guardar(){
+
+ guardar(){
+  
   const citas={
     nombre_paciente:this.nombre_paciente,
     documento:this.documento,

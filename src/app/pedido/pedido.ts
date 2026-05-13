@@ -16,13 +16,13 @@ export class pedido {
   listaPedido:any[]=[]
 
   guardar(){
-    const pedido={
+    const pedidos={
       cliente:this.cliente,
       producto:this.producto,
       cantidad:this.cantidad,
       direccion_entrega:this.direccion_entrega,
     }
-    this.listaPedido.push(pedido);
+    this.listaPedido.push(pedidos);
     console.log(this.listaPedido);
     
   }

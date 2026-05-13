@@ -8,7 +8,7 @@
     <label>edad</label>
     <input [(ngModel)]="edad" name="edad" placeholder="escriba la edad de la mascota">
     <label>nombre_dueño</label>
-    <input [(ngModel)]="nombre_dueño" name="nombre_dueño" placeholder="escriba el nombre del dueño">
+    <input [(ngModel)]="nombre_duenio" name="nombre_dueño" placeholder="escriba el nombre del dueño">
     <button type="submit">guardar</button>
     <button>cancelar</button>
 </form>
@@ -18,13 +18,13 @@
         <th>nombre_mascota</th>
         <th>tipo</th>
         <th>edad</th>
-        <th>nombre_dueño</th>
+        <th>nombre_duenio</th>
     </tr>
     <tr *ngFor="let i of listaMascota ">
     <td> {{i.nombre_mascota}}</td>
     <td>{{i.tipo}}</td>
     <td>{{i.edad}}</td>
-    <td>{{i.nombre_dueño}}</td>
+    <td>{{i.nombre_duenio}}</td>
 
 </tr>
 </table>

@@ -1,18 +1,19 @@
-
-<h1>formulario usuario</h1>
+<h1>formulario citas</h1>
 <form (ngSubmit)="guardar()">
     <label>nombre_paciente</label>
-    <input [(ngModel)]="nombre_paciente" name = "nombre_paciente" placeholder = "escriba nombre del nombre_paciente">
+    <input [(ngModel)]="nombre_paciente" name = "nombre_paciente" placeholder = "escriba nombre del paciente">
     <label>documento</label>
-    <input [(ngModel)]="documento" name="documento" placeholder="escriba la clase de documento">
+    <input [(ngModel)]="documento" name="documento" placeholder="escriba el documento">
     <label>fecha</label>
-    <input [(ngModel)]="fecha" name="fecha" placeholder="escriba la fecha">
+    <input [(ngModel)]="fecha" name="fecha" placeholder="escribala fecha">
     <label>hora</label>
     <input [(ngModel)]="hora" name="hora" placeholder="escriba la hora">
-    <label >expecialidad</label>
-    <input [(ngModel)]="expecialidad" name="expecialidad" placeholder="escriba la expecialidad">
+    <label>expecialidad</label>
+    <input [(ngModel)]="expecialidad" name="expecialidad" placeholder="escriba su expecialidad">
+
     <button type="submit">guardar</button>
-    <button>cancelar</button>
+
+    
 </form>
 
 <table>
@@ -24,10 +25,10 @@
         <th>expecialidad</th>
     </tr>
     <tr *ngFor="let i of listamedica ">
-    <td> {{i.nombre}}</td>
-    <td>{{i.correo}}</td>
-    <td>{{i.asunto}}</td>
-    <td>{{i.mensaje}}</td>
+    <td> {{i.nombre}} </td>
+    <td>{{i.correo}} </td>
+    <td>{{i.asunto}} </td>
+    <td>{{i.mensaje}} </td>
     <td>{{i.expecialidad}} </td>
 
 </tr>

@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './empleado.css',
 })
 export class Empleado {
- nombre:string='';
+  nombre:string='';
   documento:string='';
   empleado:string='';
   salario:string='';
